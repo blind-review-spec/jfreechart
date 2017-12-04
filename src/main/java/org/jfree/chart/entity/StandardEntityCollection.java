@@ -115,6 +115,7 @@ public class StandardEntityCollection implements EntityCollection,
      *
      * @param entity  the entity ({@code null} not permitted).
      */
+    //@ requires entity != null;
     @Override
     public void add(ChartEntity entity) {
         Args.nullNotPermitted(entity, "entity");
@@ -127,6 +128,7 @@ public class StandardEntityCollection implements EntityCollection,
      * @param collection  the collection of entities ({@code null} not
      *     permitted).
      */
+    //@ requires collection != null;
     @Override
     public void addAll(EntityCollection collection) {
         this.entities.addAll(collection.getEntities());

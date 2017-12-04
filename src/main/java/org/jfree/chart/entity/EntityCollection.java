@@ -66,6 +66,7 @@ public interface EntityCollection {
      *
      * @param entity  the entity ({@code null} not permitted).
      */
+    //@ requires entity != null;
     public void add(ChartEntity entity);
 
     /**
@@ -73,6 +74,7 @@ public interface EntityCollection {
      *
      * @param collection  the other collection.
      */
+    //@ requires collection != null;
     public void addAll(EntityCollection collection);
 
     /**
@@ -92,6 +94,7 @@ public interface EntityCollection {
      *
      * @return An entity.
      */
+    //@ requires index >= 0 && index < getEnityCount();
     public ChartEntity getEntity(int index);
 
     /**
@@ -99,6 +102,7 @@ public interface EntityCollection {
      *
      * @return The entity count.
      */
+    //@ requires true;
     public int getEntityCount();
 
     /**
