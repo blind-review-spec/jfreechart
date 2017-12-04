@@ -622,6 +622,11 @@ public class CategoryAxis extends Axis implements Cloneable, Serializable {
      *
      * @return The coordinate.
      */
+    //@ requires category != null; 
+    //@ requires categories != null;
+    //@ requires area != null;
+    //@ requires edge != null;
+    //@ requires category >= 0 && category < categoryCount;
     public double getCategoryJava2DCoordinate(CategoryAnchor anchor, 
             int category, int categoryCount, Rectangle2D area, 
             RectangleEdge edge) {
@@ -653,6 +658,7 @@ public class CategoryAxis extends Axis implements Cloneable, Serializable {
      * @see #getCategoryMiddle(int, int, Rectangle2D, RectangleEdge)
      * @see #getCategoryEnd(int, int, Rectangle2D, RectangleEdge)
      */
+    //@ requires area != null;
     public double getCategoryStart(int category, int categoryCount, 
             Rectangle2D area, RectangleEdge edge) {
 
@@ -711,6 +717,7 @@ public class CategoryAxis extends Axis implements Cloneable, Serializable {
      * @see #getCategoryStart(int, int, Rectangle2D, RectangleEdge)
      * @see #getCategoryMiddle(int, int, Rectangle2D, RectangleEdge)
      */
+    //@ requires area != null;
     public double getCategoryEnd(int category, int categoryCount,
             Rectangle2D area, RectangleEdge edge) {
         return getCategoryStart(category, categoryCount, area, edge)
@@ -734,6 +741,11 @@ public class CategoryAxis extends Axis implements Cloneable, Serializable {
      * @see #getCategorySeriesMiddle(Comparable, Comparable, CategoryDataset,
      *     double, Rectangle2D, RectangleEdge)
      */
+    //@ requires category != null; 
+    //@ requires categories != null;
+    //@ requires area != null;
+    //@ requires edge != null;
+    //@ requires category >= 0 && category < categoryCount;
     public double getCategoryMiddle(Comparable category,
             List categories, Rectangle2D area, RectangleEdge edge) {
         Args.nullNotPermitted(categories, "categories");
@@ -757,6 +769,12 @@ public class CategoryAxis extends Axis implements Cloneable, Serializable {
      *
      * @since 1.0.7
      */
+    //@ requires category != null; 
+    //@ requires seriesKey != null;
+    //@ requires dataset != null;
+    //@ requires itemMargin >= 0 && itemMargin < 1;
+    //@ requires area != null;
+    //@ requires edge != null;
     public double getCategorySeriesMiddle(Comparable category,
             Comparable seriesKey, CategoryDataset dataset, double itemMargin,
             Rectangle2D area, RectangleEdge edge) {
@@ -795,6 +813,9 @@ public class CategoryAxis extends Axis implements Cloneable, Serializable {
      *
      * @since 1.0.13
      */
+    //@ requires itemMargin <= 0 && itemMargin < 1; 
+    //@ requires area != null;
+    //@ requires edge != null;
     public double getCategorySeriesMiddle(int categoryIndex, int categoryCount,
             int seriesIndex, int seriesCount, double itemMargin,
             Rectangle2D area, RectangleEdge edge) {

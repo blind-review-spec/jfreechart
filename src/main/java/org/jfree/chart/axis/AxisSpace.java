@@ -235,6 +235,7 @@ public class AxisSpace implements Cloneable, PublicCloneable, Serializable {
      *
      * @return The result.
      */
+    //@ requires area != null; 
     public Rectangle2D shrink(Rectangle2D area, Rectangle2D result) {
         if (result == null) {
             result = new Rectangle2D.Double();
@@ -277,6 +278,7 @@ public class AxisSpace implements Cloneable, PublicCloneable, Serializable {
      *
      * @return The reserved area.
      */
+    //@ requires area != null; 
     public Rectangle2D reserved(Rectangle2D area, RectangleEdge edge) {
         Rectangle2D result = null;
         if (edge == RectangleEdge.TOP) {

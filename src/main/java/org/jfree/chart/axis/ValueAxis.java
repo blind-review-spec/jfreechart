@@ -777,6 +777,8 @@ public abstract class ValueAxis extends Axis
      * @return The space required to draw the axis (including pre-reserved
      *         space).
      */
+    //following not required in all branches
+    //@ requires g2 != null; 
     @Override
     public AxisSpace reserveSpace(Graphics2D g2, Plot plot, 
             Rectangle2D plotArea, RectangleEdge edge, AxisSpace space) {
@@ -940,6 +942,7 @@ public abstract class ValueAxis extends Axis
      *
      * @see #setInverted(boolean)
      */
+    //@ requires true;
     public boolean isInverted() {
         return this.inverted;
     }
@@ -1471,6 +1474,7 @@ public abstract class ValueAxis extends Axis
      *
      * @see #java2DToValue(double, Rectangle2D, RectangleEdge)
      */
+    //@ requires area != null;
     public abstract double valueToJava2D(double value, Rectangle2D area,
                                          RectangleEdge edge);
 
@@ -1503,6 +1507,7 @@ public abstract class ValueAxis extends Axis
      *
      * @see #valueToJava2D(double, Rectangle2D, RectangleEdge)
      */
+    //@ requires area != null;
     public abstract double java2DToValue(double java2DValue, Rectangle2D area, 
             RectangleEdge edge);
 
