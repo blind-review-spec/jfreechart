@@ -989,6 +989,7 @@ public class PiePlot extends Plot implements Cloneable, Serializable {
      *
      * @since 1.0.3
      */
+    //@ requires key != null;
     public void setSectionPaint(Comparable key, Paint paint) {
         // null argument check delegated...
         this.sectionPaintMap.put(key, paint);
@@ -1610,6 +1611,7 @@ public class PiePlot extends Plot implements Cloneable, Serializable {
      *
      * @see #getLabelGenerator()
      */
+    //@ requires true;
     public void setLabelGenerator(PieSectionLabelGenerator generator) {
         this.labelGenerator = generator;
         fireChangeEvent();
@@ -2092,6 +2094,7 @@ public class PiePlot extends Plot implements Cloneable, Serializable {
      *
      * @see #getToolTipGenerator()
      */
+    //@ requires true;
     public void setToolTipGenerator(PieToolTipGenerator generator) {
         this.toolTipGenerator = generator;
         fireChangeEvent();
@@ -2116,6 +2119,7 @@ public class PiePlot extends Plot implements Cloneable, Serializable {
      *
      * @see #getURLGenerator()
      */
+    //@ requires true;
     public void setURLGenerator(PieURLGenerator generator) {
         this.urlGenerator = generator;
         fireChangeEvent();

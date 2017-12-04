@@ -747,6 +747,7 @@ public class XYPlot extends Plot implements ValueAxisPlot, Pannable, Zoomable,
      *
      * @see #getOrientation()
      */
+    //@ requires orientation != null;
     public void setOrientation(PlotOrientation orientation) {
         Args.nullNotPermitted(orientation, "orientation");
         if (orientation != this.orientation) {
@@ -1381,6 +1382,7 @@ public class XYPlot extends Plot implements ValueAxisPlot, Pannable, Zoomable,
      *
      * @see #getDataset(int)
      */
+    //@ requires index >= 0 && index < getDatasetCount();
     public void setDataset(int index, XYDataset dataset) {
         XYDataset existing = getDataset(index);
         if (existing != null) {
@@ -1401,6 +1403,7 @@ public class XYPlot extends Plot implements ValueAxisPlot, Pannable, Zoomable,
      *
      * @return The number of datasets.
      */
+    //@ requires true;
     public int getDatasetCount() {
         return this.datasets.size();
     }
@@ -1524,6 +1527,7 @@ public class XYPlot extends Plot implements ValueAxisPlot, Pannable, Zoomable,
      *
      * @since 1.0.11
      */
+    //@ requires true;
     public int getRendererCount() {
         return this.renderers.size();
     }
@@ -1576,6 +1580,7 @@ public class XYPlot extends Plot implements ValueAxisPlot, Pannable, Zoomable,
      *
      * @see #getRenderer(int)
      */
+    //@ requires index >= 0 && index < getRendererCount();
     public void setRenderer(int index, XYItemRenderer renderer) {
         setRenderer(index, renderer, true);
     }
@@ -1892,6 +1897,7 @@ public class XYPlot extends Plot implements ValueAxisPlot, Pannable, Zoomable,
      *
      * @see #getDomainGridlinePaint()
      */
+    //@ requires paint != null;
     public void setDomainGridlinePaint(Paint paint) {
         Args.nullNotPermitted(paint, "paint");
         this.domainGridlinePaint = paint;
@@ -2007,6 +2013,7 @@ public class XYPlot extends Plot implements ValueAxisPlot, Pannable, Zoomable,
      *
      * @see #getRangeGridlinePaint()
      */
+    //@ requires paint != null;
     public void setRangeGridlinePaint(Paint paint) {
         Args.nullNotPermitted(paint, "paint");
         this.rangeGridlinePaint = paint;
@@ -2865,6 +2872,7 @@ public class XYPlot extends Plot implements ValueAxisPlot, Pannable, Zoomable,
      * @see #getAnnotations()
      * @see #removeAnnotation(XYAnnotation)
      */
+    //@ requires annotation != null;
     public void addAnnotation(XYAnnotation annotation) {
         addAnnotation(annotation, true);
     }
@@ -4345,6 +4353,7 @@ public class XYPlot extends Plot implements ValueAxisPlot, Pannable, Zoomable,
      *
      * @see #getRangeAxisIndex(ValueAxis)
      */
+    //@ requires true;
     public int getDomainAxisIndex(ValueAxis axis) {
         int result = findDomainAxisIndex(axis);
         if (result < 0) {
@@ -4376,6 +4385,7 @@ public class XYPlot extends Plot implements ValueAxisPlot, Pannable, Zoomable,
      *
      * @see #getDomainAxisIndex(ValueAxis)
      */
+   //@ requires true;
     public int getRangeAxisIndex(ValueAxis axis) {
         int result = findRangeAxisIndex(axis);
         if (result < 0) {

@@ -156,6 +156,7 @@ public class CrosshairState {
      * @param transY  the y-value in Java2D space.
      * @param orientation  the plot orientation ({@code null} not permitted).
      */
+    //@ requires true;
     public void updateCrosshairPoint(double x, double y, int datasetIndex,
             double transX, double transY, PlotOrientation orientation) {
 

@@ -311,6 +311,8 @@ public class CombinedDomainXYPlot extends XYPlot
      * @param subplot  the subplot ({@code null} not permitted).
      * @param weight  the weight (must be &gt;= 1).
      */
+    //@ requires subplot != null;
+    //@ requires weight > 0;
     public void add(XYPlot subplot, int weight) {
         Args.nullNotPermitted(subplot, "subplot");
         if (weight <= 0) {

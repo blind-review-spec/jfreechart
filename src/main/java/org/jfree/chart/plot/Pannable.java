@@ -81,6 +81,7 @@ public interface Pannable {
      * @param info the plot info
      * @param source the source point where the pan action started.
      */
+    //@ requires true;
     public void panDomainAxes(double percent, PlotRenderingInfo info,
             Point2D source);
 
@@ -91,6 +92,7 @@ public interface Pannable {
      * @param info the plot info
      * @param source the source point where the pan action started.
      */
+    //@ requires true;
     public void panRangeAxes(double percent, PlotRenderingInfo info,
             Point2D source);
 

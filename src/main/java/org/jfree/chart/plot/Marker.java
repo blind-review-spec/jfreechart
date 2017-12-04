@@ -206,6 +206,7 @@ public abstract class Marker implements Cloneable, Serializable {
      *
      * @see #setPaint(Paint)
      */
+    //@ requires true;
     public Paint getPaint() {
         return this.paint;
     }
@@ -231,6 +232,7 @@ public abstract class Marker implements Cloneable, Serializable {
      *
      * @see #setStroke(Stroke)
      */
+    //@ requires true;
     public Stroke getStroke() {
         return this.stroke;
     }
@@ -256,6 +258,7 @@ public abstract class Marker implements Cloneable, Serializable {
      *
      * @see #setOutlinePaint(Paint)
      */
+    //@ requires true;
     public Paint getOutlinePaint() {
         return this.outlinePaint;
     }
@@ -280,6 +283,7 @@ public abstract class Marker implements Cloneable, Serializable {
      *
      * @see #setOutlineStroke(Stroke)
      */
+    //@ requires true;
     public Stroke getOutlineStroke() {
         return this.outlineStroke;
     }
@@ -338,6 +342,7 @@ public abstract class Marker implements Cloneable, Serializable {
      *
      * @see #setLabel(String)
      */
+    //@ requires true;
     public String getLabel() {
         return this.label;
     }
@@ -362,6 +367,7 @@ public abstract class Marker implements Cloneable, Serializable {
      *
      * @see #setLabelFont(Font)
      */
+    //@ requires true;
     public Font getLabelFont() {
         return this.labelFont;
     }
@@ -387,6 +393,7 @@ public abstract class Marker implements Cloneable, Serializable {
      *
      * @see #setLabelPaint(Paint)
      */
+    //@ requires true;
     public Paint getLabelPaint() {
         return this.labelPaint;
     }
@@ -437,6 +444,7 @@ public abstract class Marker implements Cloneable, Serializable {
      *
      * @see #setLabelAnchor(RectangleAnchor)
      */
+    //@ requires true;
     public RectangleAnchor getLabelAnchor() {
         return this.labelAnchor;
     }
@@ -463,6 +471,7 @@ public abstract class Marker implements Cloneable, Serializable {
      *
      * @see #setLabelOffset(RectangleInsets)
      */
+    //@ requires true;
     public RectangleInsets getLabelOffset() {
         return this.labelOffset;
     }
@@ -488,6 +497,7 @@ public abstract class Marker implements Cloneable, Serializable {
      *
      * @see #setLabelOffsetType(LengthAdjustmentType)
      */
+    //@ requires true;
     public LengthAdjustmentType getLabelOffsetType() {
         return this.labelOffsetType;
     }
@@ -513,6 +523,7 @@ public abstract class Marker implements Cloneable, Serializable {
      *
      * @see #setLabelTextAnchor(TextAnchor)
      */
+    //@ requires true;
     public TextAnchor getLabelTextAnchor() {
         return this.labelTextAnchor;
     }

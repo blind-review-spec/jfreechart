@@ -614,6 +614,7 @@ public abstract class Plot implements AxisChangeListener,
      *
      * @see #getBackgroundPaint()
      */
+    //@ requires true;
     public void setBackgroundPaint(Paint paint) {
 
         if (paint == null) {
@@ -691,6 +692,7 @@ public abstract class Plot implements AxisChangeListener,
      *
      * @see #getDrawingSupplier()
      */
+    //@ requires true;
     public void setDrawingSupplier(DrawingSupplier supplier) {
         this.drawingSupplier = supplier;
         fireChangeEvent();
@@ -962,6 +964,7 @@ public abstract class Plot implements AxisChangeListener,
      *
      * @since 1.0.13
      */
+    //@ requires true;
     public boolean isNotify() {
         return this.notify;
     }
@@ -976,6 +979,7 @@ public abstract class Plot implements AxisChangeListener,
      *
      * @since 1.0.13
      */
+    //@ requires true;
     public void setNotify(boolean notify) {
         this.notify = notify;
         // if the flag is being set to true, there may be queued up changes...

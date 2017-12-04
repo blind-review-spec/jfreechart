@@ -686,6 +686,7 @@ public class Crosshair implements Cloneable, PublicCloneable, Serializable {
      *
      * @see #addPropertyChangeListener(java.beans.PropertyChangeListener) 
      */
+    //@ requires true;
     public void removePropertyChangeListener(PropertyChangeListener l) {
         this.pcs.removePropertyChangeListener(l);
     }

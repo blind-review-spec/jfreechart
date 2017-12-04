@@ -152,6 +152,7 @@ public class PlotRenderingInfo implements Cloneable, Serializable {
      *
      * @return The subplot count.
      */
+    //@ requires true;
     public int getSubplotCount() {
         return this.subplotInfo.size();
     }
@@ -176,6 +177,7 @@ public class PlotRenderingInfo implements Cloneable, Serializable {
      *
      * @see #addSubplotInfo(PlotRenderingInfo)
      */
+    //@ requires index >= 0 && index < getSubplotCount();
     public PlotRenderingInfo getSubplotInfo(int index) {
         return (PlotRenderingInfo) this.subplotInfo.get(index);
     }

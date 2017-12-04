@@ -704,6 +704,7 @@ public class CategoryPlot extends Plot implements ValueAxisPlot, Pannable,
      *
      * @see #getOrientation()
      */
+    //@ requires orientation != null;
     public void setOrientation(PlotOrientation orientation) {
         Args.nullNotPermitted(orientation, "orientation");
         this.orientation = orientation;
@@ -777,6 +778,7 @@ public class CategoryPlot extends Plot implements ValueAxisPlot, Pannable,
      *
      * @see #getDomainAxis()
      */
+    //@ requires true;
     public void setDomainAxis(CategoryAxis axis) {
         setDomainAxis(0, axis);
     }
@@ -1370,6 +1372,7 @@ public class CategoryPlot extends Plot implements ValueAxisPlot, Pannable,
      *
      * @since 1.0.11
      */
+    //@ requires dataset != null;
     public int indexOf(CategoryDataset dataset) {
         for (Entry<Integer, CategoryDataset> entry: this.datasets.entrySet()) {
             if (entry.getValue() == dataset) {
@@ -1572,6 +1575,7 @@ public class CategoryPlot extends Plot implements ValueAxisPlot, Pannable,
      *
      * @see #getRenderer()
      */
+    //@ requires true;
     public void setRenderer(CategoryItemRenderer renderer) {
         setRenderer(0, renderer, true);
     }
@@ -1877,6 +1881,7 @@ public class CategoryPlot extends Plot implements ValueAxisPlot, Pannable,
      *
      * @see #getDomainGridlinePaint()
      */
+    //@ requires paint != null;
     public void setDomainGridlinePaint(Paint paint) {
         Args.nullNotPermitted(paint, "paint");
         this.domainGridlinePaint = paint;
@@ -2043,6 +2048,7 @@ public class CategoryPlot extends Plot implements ValueAxisPlot, Pannable,
      *
      * @see #getRangeGridlinePaint()
      */
+    //@ requires paint != null;
     public void setRangeGridlinePaint(Paint paint) {
         Args.nullNotPermitted(paint, "paint");
         this.rangeGridlinePaint = paint;

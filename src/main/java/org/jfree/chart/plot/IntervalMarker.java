@@ -171,6 +171,7 @@ public class IntervalMarker extends Marker implements Cloneable, Serializable {
      *
      * @return The gradient paint transformer (possibly {@code null}).
      */
+    //@ requires true;
     public GradientPaintTransformer getGradientPaintTransformer() {
         return this.gradientPaintTransformer;
     }

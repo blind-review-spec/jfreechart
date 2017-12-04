@@ -121,6 +121,7 @@ public class CategoryCrosshairState extends CrosshairState {
      * @param transY  y translated into Java2D space.
      * @param orientation  the plot orientation.
      */
+    //@ requires true;
     public void updateCrosshairPoint(Comparable rowKey, Comparable columnKey,
             double value, int datasetIndex, double transX, double transY,
             PlotOrientation orientation) {
@@ -158,6 +159,7 @@ public class CategoryCrosshairState extends CrosshairState {
      * @param transX  the translated x-value.
      * @param orientation  the plot orientation.
      */
+    //@ requires true;
     public void updateCrosshairX(Comparable rowKey, Comparable columnKey,
             int datasetIndex, double transX, PlotOrientation orientation) {
 
