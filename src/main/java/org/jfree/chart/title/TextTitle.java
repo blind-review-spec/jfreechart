@@ -265,6 +265,7 @@ public class TextTitle extends Title
      *
      * @param text  the text ({@code null} not permitted).
      */
+    //@ requires text != null;
     public void setText(String text) {
         Args.nullNotPermitted(text, "text");
         if (!this.text.equals(text)) {
